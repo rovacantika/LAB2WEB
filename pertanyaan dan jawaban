@@ -1,0 +1,33 @@
+Baik, saya akan menjawab pertanyaan-pertanyaan tersebut satu per satu:
+
+1. Untuk menjawab pertanyaan ini, kita perlu melakukan eksperimen langsung dengan kode CSS. Karena saya tidak bisa melakukannya secara langsung, saya akan menjelaskan proses umumnya:
+   - Buka editor kode atau developer tools di browser
+   - Tambahkan properti dan nilai CSS baru ke elemen yang ditargetkan
+   - Amati perubahan yang terjadi pada tampilan elemen tersebut
+   - Catat perubahan yang terjadi untuk dilaporkan
+
+2. Perbedaan antara deklarasi CSS elemen h1 {...} dengan #intro h1 {...}:
+   - h1 {...} : Ini adalah selektor elemen yang akan mempengaruhi semua elemen h1 di halaman.
+   - #intro h1 {...} : Ini adalah selektor yang lebih spesifik. Hanya akan mempengaruhi elemen h1 yang berada di dalam elemen dengan id "intro".
+   - #intro h1 {...} memiliki spesifisitas yang lebih tinggi, sehingga akan menimpa aturan h1 {...} jika terjadi konflik.
+
+3. Ketika menambahkan CSS internal ke elemen yang sama dengan deklarasi eksternal:
+   - CSS internal biasanya akan menimpa CSS eksternal karena memiliki prioritas yang lebih tinggi.
+   - Namun, ini tergantung pada spesifisitas selektor dan urutan pemuatan CSS.
+   - Contoh:
+     Eksternal: h1 { color: blue; }
+     Internal: <style>h1 { color: red; }</style>
+     Hasil: Teks h1 akan berwarna merah karena CSS internal menimpa CSS eksternal.
+
+4. Pada elemen HTML yang memiliki ID dan Class:
+   - Deklarasi CSS menggunakan ID akan memiliki prioritas lebih tinggi daripada deklarasi menggunakan Class.
+   - Contoh:
+     HTML: <div id="myDiv" class="myClass">Konten</div>
+     CSS:
+     css
+     #myDiv { color: red; }
+     .myClass { color: blue; }
+     
+     Hasil: Teks akan berwarna merah karena selektor ID memiliki prioritas lebih tinggi.
+
+Apakah ada bagian yang ingin Anda tanyakan lebih lanjut atau memerlukan penjelasan tambahan?
